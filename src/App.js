@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Route, Routes } from 'react-router-dom'
+import Home from './Pages/Home'
+import Auth from './Components/Auth'
+import AdminDashboard from './Pages/AdminDashboard'
+import Footer from './Components/Footer'
+import Landing from './Pages/Landing'
+import Addbike from './Components/Addbike'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+      <Routes>
+       <Route path='/' element={<Landing/>}/>
+       <Route path='/home' element={<Home/>}/>
+      <Route path='/login' element={<Auth/>}/>
+      <Route path='/register' element={<Auth register />}/>
+      <Route path='/admindashboard' element={<AdminDashboard/>}/>
+      <Route path='/sellyourbike' element={<Addbike/>}/>
+
+      {/* <Route path='/projects' element={<Projects/>}/> */}
+      
+      </Routes>
+      
+   
+    
+  )
 }
 
-export default App;
+export default App
