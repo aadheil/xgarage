@@ -9,7 +9,7 @@ function Addbike() {
    <Navbars/>
      <div className='d-flex justify-content-center align-items-center w-100' style={{height:'100vh',backgroundColor:'#edebd9'}}>
     
-         <div className='flex-column align-items-center' style={{height:'500px',width:'700px',backgroundColor:'#00848c'}}>
+         <div className='flex-column align-items-center mt-5' style={{height:'600px',width:'700px',backgroundColor:'#00848c'}}>
             <div className='mb-5'>
              <h2 className='text-center mt-4 '>Add your bike details</h2>
             </div>
@@ -27,6 +27,12 @@ function Addbike() {
              </div>
              <div className='d-flex justify-content-center mt-3'>
                  <input type="text" className='form-control w-50' placeholder='Description'/>
+             </div>
+             <div className='d-flex justify-content-center mt-3'>
+                 <input type="text" className='form-control w-50' placeholder='Your Name'/>
+             </div>
+             <div className='d-flex justify-content-center mt-3'>
+                 <input type="text" className='form-control w-50' placeholder='Your Mobile Number'/>
              </div>
              <div className='d-flex justify-content-center mt-3'>
                  <input type="text" className='form-control w-50' placeholder='Yoru Place'/>

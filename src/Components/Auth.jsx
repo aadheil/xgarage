@@ -28,10 +28,17 @@ function Auth({register}) {
                         </h5>
                         <Form className='text-light w-100'>
                        { registerForm &&
-                       <Form.Group className="mb-3" controlId="formBasicUsername" >
-                      
-                       <Form.Control type="text" placeholder="Enter your name"/>
-                       </Form.Group>}
+                       <>
+                        <Form.Group className="mb-3" controlId="formBasicUsername" >
+                        
+                        <Form.Control type="text" placeholder="Enter your name"/>
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formBasicmob" >
+                        
+                        <Form.Control type="text" placeholder="Enter your mobile number"/>
+                        </Form.Group>
+                       </>
+                       }
                        <Form.Group className="mb-3" controlId="formBasicEmail">
                       
                        <Form.Control type="email" placeholder="Enter your Email" />

@@ -9,16 +9,16 @@ function Footer() {
       <div className="row">
         <div className="col-sm-12 col-md-6 mt-4">
           <h6>About</h6>
-          <p className="text-justify">MoviD is a cinima related application that helps better understanding about a movie. And also helps users to post their reviews and ratings</p>
+          <p className="text-justify">X-GARAGE is a helping hand for the one who wish to buy a scondhand bike.We have varius collectons and user can also sell their own bikes</p>
         </div>
 
         <div className="col-xs-6 col-md-3 mt-4">
           <h6>Technologies</h6>
           <ul className="footer-links">
             <li><a style={{textDecoration:'none'}} className='text-dark' href="https://react.dev/">React</a></li>
-            <li><a style={{textDecoration:'none'}} className='text-dark' href="https://www.w3schools.com/js/DEFAULT.asp">Javascript</a></li>
-            <li><a style={{textDecoration:'none'}} className='text-dark' href="https://www.npmjs.com/package/json-server">Json Server</a></li>
-            <li><a style={{textDecoration:'none'}} className='text-dark' href="https://axios-http.com/docs/intro">Axios Library</a></li>
+            <li><a style={{textDecoration:'none'}} className='text-dark' href="https://www.w3schools.com/js/DEFAULT.asp">MongoDb</a></li>
+            <li><a style={{textDecoration:'none'}} className='text-dark' href="https://www.npmjs.com/package/json-server">Node js</a></li>
+            <li><a style={{textDecoration:'none'}} className='text-dark' href="https://axios-http.com/docs/intro">Express js</a></li>
             <li><a style={{textDecoration:'none'}} className='text-dark' href="https://www.w3schools.com/html/html_css.asp">Html,Css</a></li>
             {/* <li><a style={{textDecoration:'none'}} className='text-danger' href="http://scanfcode.com/category/templates/">Templates</a></li> */}
           </ul>
@@ -28,10 +28,10 @@ function Footer() {
           <h6>Quick Links</h6>
           <ul className="footer-links">
             <li><a style={{textDecoration:'none'}} className='text-dark' href="/">About Us</a></li>
-            <li><a style={{textDecoration:'none'}} className='text-dark' href="http://wa.me/919946241459">Contact Us</a></li>
+            <li><a style={{textDecoration:'none'}} className='text-dark' href="http://wa.me/919946241459" target='_blank'>Contact Us</a></li>
             <li><a style={{textDecoration:'none'}} className='text-dark' href="/home">Home</a></li>
             <li><a style={{textDecoration:'none'}} className='text-dark' href="/">LandingPage</a></li>
-            <li><a style={{textDecoration:'none'}} className='text-dark' href="/home/">Reviews</a></li>
+            <li><a style={{textDecoration:'none'}} className='text-dark' href="/login">Login</a></li>
           </ul>
         </div>
       </div>
@@ -41,7 +41,7 @@ function Footer() {
       <div className="row">
         <div className="col-md-8 col-sm-6 col-xs-12">
           <p className="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
-       MuviD
+       X-GARAGE
           </p>
         </div>
 

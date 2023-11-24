@@ -7,13 +7,13 @@ import './navbar.css'
 function Navbars() {
     
   return (
-    <Navbar expand="sm" className=" shadow " style={{backgroundColor:'#00848c'}}>
+    <Navbar expand="sm" className=" shadow mb-5" style={{backgroundColor:'#00848c',position:'fixed',zIndex:'1',width:'100%'}}>
       <Container>
         <Navbar.Brand href="/" className='fw-bolder me-5'>Xgarage</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="/" className='nvbt shadow me-2 mt-3 text-center' style={{borderRadius:'20%',width:'100px'}}>Home</Nav.Link>
+            <Nav.Link href="/home" className='nvbt shadow me-2 mt-3 text-center' style={{borderRadius:'20%',width:'100px'}}>Home</Nav.Link>
             <Nav.Link href="/login" className='nvbt shadow me-2 mt-3 text-center ' style={{borderRadius:'20%',width:'100px'}}>Login</Nav.Link>
             <Nav.Link href="/sellyourbike" className='nvbt shadow  me-2 mt-3 text-center  ' style={{borderRadius:'20%',width:'100px'}}>Start Selling</Nav.Link>
             {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
