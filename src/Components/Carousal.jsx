@@ -14,9 +14,9 @@ function Carousal() {
         setIndexx(selectedIndexx);
       };
   return (
-    <div className='mt-5 mb-5 d-flex  justify-content-evenly row'>
+    <div className='mt-5 d-flex  justify-content-evenly row'>
        <div className='car-1 col-lg-6 mb-5' >
-        <h2 className='text-center fw-bolder mb-4'>Adventure Bikes</h2>
+        <h2 className='text-center fw-bolder mb-4 text-light'>Adventure Bikes</h2>
          <Carousel activeIndex={index} style={{width:'95%'}} onSelect={handleSelect}>
            <Carousel.Item>
              <img style={{height:'400px',width:'100%'}} src='https://mcn-images.bauersecure.com/pagefiles/676760/africa_twin_as_out.jpg' text="First slide" />
@@ -44,7 +44,7 @@ function Carousal() {
        </div>
 
        <div className='car-1 col-lg-6 ' >
-       <h2 className='text-center fw-bolder mb-4'>Premium Bikes</h2>
+       <h2 className='text-center fw-bolder mb-4 text-light'>Premium Bikes</h2>
 
          <Carousel activeIndex={indexx} style={{width:'95%'}} onSelect={handleSelects}>
            <Carousel.Item>
