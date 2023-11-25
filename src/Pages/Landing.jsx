@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import './landing.css'
 function Landing() {
   return (
-    <div className="landimg container-fluid rounded " style={{width:'100%',height:'100vh',backgroundColor:'#00848c'}}>
+    <div className="landimg container-fluid rounded " style={{width:'100%',height:'100vh',backgroundColor:'#00848c',backgroundImage: `url("https://img.freepik.com/free-vector/aesthetic-arrow-background-black-gradient-technology-concept-vector_53876-143338.jpg?w=1060&t=st=1700927662~exp=1700928262~hmac=5188176c94a7bfec94bb24058c2331435c5a297387953ffa5f60d52d85ba4a06")`}}>
        
     <Row className='align-items-center p-5'>
         <Col sm={12} md={6}>
