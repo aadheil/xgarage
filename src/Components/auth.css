@@ -1,5 +1,5 @@
 .bgforauth{
-    background-image: url('https://img.freepik.com/free-photo/cool-motorcycle-indoors_23-2150849381.jpg?t=st=1700924938~exp=1700928538~hmac=0376cc187f22203679efd35d15fc84cd070446287cf668f48667b4a684f5af2e&w=1380');
+    background-image: url('./cool-motorcycle-indoors.jpg');
   background-repeat: no-repeat;
   background-position: cover;
   background-size: 100% 100%;
@@ -11,7 +11,7 @@
 }
 
 .bgforaddbike{
-    background-image: url('https://img.freepik.com/free-photo/cool-motorcycle-indoors_23-2150849425.jpg?t=st=1700926388~exp=1700929988~hmac=2747522a61f6b622558dcb6311f6c3f56734a224320a960618ba8cafb5f18025&w=1380');
+    background-image: url('./cool-motorcycle-indoors\ \(1\).jpg');
   background-repeat: no-repeat;
   background-position: cover;
   background-size: 100% 100%;
