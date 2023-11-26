@@ -1,1 +1,1 @@
-export const BASEURL = 'http://xgservernode.onrender.com';
+export const BASEURL = 'https://xgservernode.onrender.com';
