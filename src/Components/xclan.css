@@ -1,0 +1,21 @@
+.iimg{
+    width: 300px;
+    height: 300px;
+}
+
+.iimg:hover{
+    width: 340px;
+    height: 340px;
+    /* z-index: 55; */
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: 15px; */
+}
+
+.rvs{
+    /* background-image: url('https://4.bp.blogspot.com/-mgkfG-20l5M/TkAFqXKVMNI/AAAAAAAAIac/FvTaenj32D8/s1600/1440x900+black+wallpaper+Free.jpg'); */
+    background-image: url('../Pages/landingback.jpg');
+    background-size:contain ;
+}

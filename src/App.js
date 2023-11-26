@@ -6,6 +6,7 @@ import AdminDashboard from './Pages/AdminDashboard'
 import Footer from './Components/Footer'
 import Landing from './Pages/Landing'
 import Addbike from './Components/Addbike'
+import Xclan from './Components/Xclan'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path='/register' element={<Auth register />}/>
       <Route path='/admindashboard' element={<AdminDashboard/>}/>
       <Route path='/sellyourbike' element={<Addbike/>}/>
+      <Route path='/xclan' element={<Xclan/>}/>
 
       {/* <Route path='/projects' element={<Projects/>}/> */}
       

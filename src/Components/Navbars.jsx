@@ -29,7 +29,7 @@ function Navbars() {
   }
     
   return (
-    <Navbar expand="sm" className=" shadow mb-5" style={{backgroundColor:'#00848c',position:'fixed',zIndex:'1',width:'100%'}}>
+    <Navbar expand="sm" className=" shadow mb-5" style={{backgroundColor:'#00848c',position:'fixed',zIndex:'10',width:'100%'}}>
       <Container>
         <Navbar.Brand href="/" className='fw-bolder me-5'><img src="https://openclipart.org/image/2400px/svg_to_png/169874/1336282248.png" style={{height:'60px',width:'80px'}} alt="" className='me-2 ms-1'/>GarageX</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -37,7 +37,7 @@ function Navbars() {
           <Nav className="me-auto">
             <Nav.Link href="/home" className='nvbt shadow me-2 mt-3 text-center fw-bolder mb-3' style={{borderRadius:'20%',width:'100px'}}>Home</Nav.Link>
             <Nav.Link  className='nvbt shadow  me-2 mt-3 text-center fw-bolder mb-3' style={{borderRadius:'20%',width:'100px'}} onClick={handleselling}>Sell</Nav.Link>
-            <Nav.Link  className='nvbt shadow  me-2 mt-3 text-center fw-bolder mb-3 ' style={{borderRadius:'20%',width:'100px'}} onClick={handleselling}>X-Clan</Nav.Link>
+            <Nav.Link href='/xclan' className='nvbt shadow  me-2 mt-3 text-center fw-bolder mb-3 ' style={{borderRadius:'20%',width:'100px'}}  >Gallery</Nav.Link>
                 {!isloggedin?<Nav.Link href="/login" className='nvbt shadow me-2 mb-3 mt-3 text-center fw-bolder ' style={{borderRadius:'20%',width:'100px'}}>Login</Nav.Link>
                 :
               <Nav.Link className='nvbt shadow me-2 mt-3 text-center fw-bolder mb-3' style={{borderRadius:'20%',width:'100px'}} onClick={handleLogout}>Logout</Nav.Link>}

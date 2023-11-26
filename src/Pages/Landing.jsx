@@ -24,7 +24,7 @@ function Landing() {
 
         </Col>
         <Col sm={12} md={6}>
-        <img src="https://www.pinclipart.com/picdir/big/17-171986_cartoon-motorbike-clipart.png" alt="" style={{marginTop:'100px'}} className='img-fluid w-75' />
+        <img src="https://www.pinclipart.com/picdir/big/17-171986_cartoon-motorbike-clipart.png" alt="" style={{marginTop:'100px'}} className='bgbike img-fluid w-75' />
         </Col>
     </Row>
 

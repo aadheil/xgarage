@@ -15,11 +15,11 @@ function Footer() {
         <div className="col-xs-6 col-md-3 mt-4">
           <h6>Technologies</h6>
           <ul className="footer-links">
-            <li><a style={{textDecoration:'none'}} className='text-dark' href="https://react.dev/">React</a></li>
+            <li><a style={{textDecoration:'none'}} className='text-dark' href="https://react.dev/">React js</a></li>
             <li><a style={{textDecoration:'none'}} className='text-dark' href="https://www.w3schools.com/js/DEFAULT.asp">MongoDb</a></li>
             <li><a style={{textDecoration:'none'}} className='text-dark' href="https://www.npmjs.com/package/json-server">Node js</a></li>
             <li><a style={{textDecoration:'none'}} className='text-dark' href="https://axios-http.com/docs/intro">Express js</a></li>
-            <li><a style={{textDecoration:'none'}} className='text-dark' href="https://www.w3schools.com/html/html_css.asp">Html,Css</a></li>
+            <li><a style={{textDecoration:'none'}} className='text-dark' href="https://www.w3schools.com/html/html_css.asp">Bootstrap</a></li>
             {/* <li><a style={{textDecoration:'none'}} className='text-danger' href="http://scanfcode.com/category/templates/">Templates</a></li> */}
           </ul>
         </div>

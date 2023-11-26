@@ -45,6 +45,7 @@ function Auth({register}) {
       navigate('/home')
       console.log(res.data);
       sessionStorage.setItem("email",res.data.email)
+      sessionStorage.setItem("userId",res.data._id)
     }
     else{
       alert(res.response.data)
@@ -65,7 +66,7 @@ function Auth({register}) {
                 <div className='col-lg-6'>
                     <div className="d-flex align-items-center flex-column">
                         <div className="d-flex mt-2 text-light">
-                            <i className='fa-brands fa-stack-overflow fa-bounce fa-2x me-1'></i>
+                        <i className="fa-solid fa-motorcycle me-2 fa-2x fa-bounce"></i>
                             <span className='h1 fw-bolder mb-0 text-light'>GarageX</span>
                         </div>
                        

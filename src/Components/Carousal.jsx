@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
+import './carousal.css'
 // import ExampleCarouselImage from 'components/ExampleCarouselImage';
 function Carousal() {
     const [index, setIndex] = useState(0);
@@ -16,8 +17,8 @@ function Carousal() {
   return (
     <div className='mt-5 d-flex  justify-content-evenly row'>
        <div className='car-1 col-lg-6 mb-5' >
-        <h2 className='text-center fw-bolder mb-4 text-light'>Adventure Bikes</h2>
-         <Carousel activeIndex={index} style={{width:'95%'}} onSelect={handleSelect}>
+        <h2 className='text-center fw-bolder mb-4 text-light carousalL'>Adventure Bikes</h2>
+         <Carousel activeIndex={index} style={{width:'95%'}} onSelect={handleSelect} className='carousalL'>
            <Carousel.Item>
              <img style={{height:'400px',width:'100%'}} src='https://mcn-images.bauersecure.com/pagefiles/676760/africa_twin_as_out.jpg' text="First slide" />
              <Carousel.Caption>
@@ -44,9 +45,9 @@ function Carousal() {
        </div>
 
        <div className='car-1 col-lg-6 ' >
-       <h2 className='text-center fw-bolder mb-4 text-light'>Premium Bikes</h2>
+       <h2 className='text-center fw-bolder mb-4 text-light carousalR'>Premium Bikes</h2>
 
-         <Carousel activeIndex={indexx} style={{width:'95%'}} onSelect={handleSelects}>
+         <Carousel activeIndex={indexx} style={{width:'95%'}} onSelect={handleSelects} className='carousalR'>
            <Carousel.Item>
              <img style={{height:'400px',width:'100%'}} src='https://cdn.visordown.com/edited-msl-buyers-guide--0048_web.JPG?itok=mr5xrK_5' text="First slide" />
              <Carousel.Caption>

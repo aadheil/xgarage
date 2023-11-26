@@ -2,17 +2,20 @@ import React, { useState } from 'react'
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import './navbar.css'
+import { BASEURL } from '../services/baseUrl';
 
-function Bikes() {
+function Bikes({bikes}) {
     const[fulldetails,setfulldetail]=useState(false)
+    console.log(bikes);
+    
   return (
     <>
     
-       {!fulldetails&& <Card style={{ width: '18rem' ,height:'450px',backgroundColor:''}} className='ms-3 shadow mt-4 bg-dark'>
-        <Card.Img variant="top" src="https://imgd.aeplcdn.com/1280x720/bw/ec/42051/Hero-Xpulse-200-Action-169057.jpg?wm=2&q=75" style={{height:'200px',width:'100%'}}/>
+       {!fulldetails&& <Card className='cdim ms-3 shadow mt-4 bg-dark'>
+        <Card.Img variant="top"  src={bikes.bikeimage?`${BASEURL}/uploads/${bikes.bikeimage}`:"https://bikeadvice.in/wp-content/uploads/2023/11/Royal-Enfield-Himalayan-452-Pic.jpg"} style={{height:'200px',width:'100%'}}/>
         <Card.Body>
-          <Card.Title className='text-center  rounded fw-bolder' style={{backgroundColor:'#00848c'}}>Xpulse 200 4v</Card.Title>
-          <Card.Title className='text-center fw-bolder mt-4  rounded' style={{backgroundColor:'#00848c'}}>₹ 18000</Card.Title>
+          <Card.Title className='text-center  rounded fw-bolder' style={{backgroundColor:'#00848c'}}>{bikes.model} </Card.Title>
+          <Card.Title className='text-center fw-bolder mt-4  rounded' style={{backgroundColor:'#00848c'}}>₹ {bikes.overview}</Card.Title>
 
           {/* <Card.Text>
             Some quick example text to build on the card title and make up the
@@ -21,8 +24,8 @@ function Bikes() {
         </Card.Body>
         {/* <div className='d-flex flex-column'> */}
          <div className='d-flex justify-content-evenly' style={{color:'#00848c'}}>
-           <Card.Title className='text-center rounded '>2022</Card.Title>
-           <Card.Title className='text-center rounded '>5000 km</Card.Title>
+           <Card.Title className='text-center rounded '>{bikes.year}</Card.Title>
+           <Card.Title className='text-center rounded '>{bikes.km} km</Card.Title>
 
          {/* </div> */}
         </div>
@@ -40,26 +43,26 @@ function Bikes() {
         <Card style={{ width: '18rem' ,height:'450px'}}  className='ms-3 mt-4 shadow bg-dark text-light'>
         
         <Card.Body>
-          <Card.Title>Model name</Card.Title>
-          <Card.Text>
+          <Card.Title>{bikes.model}</Card.Title>
+          {/* <Card.Text>
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
-          </Card.Text>
+          </Card.Text> */}
         </Card.Body>
         <div className='d-flex flex-column'>
          <div className='d-flex justify-content-evenly text-center'>
-           <p>manufacturor Name <span className='text-danger'>Hero</span></p>
-           <p>Seller Name <span className='text-danger'>John</span></p>
+           <p>manufacturor Name <span className='text-danger'>{bikes.manufactor}</span></p>
+           <p>Seller Name <span className='text-danger'>{bikes.sname}</span></p>
          </div>
          <div className='d-flex justify-content-center mt-2'>
-         <i className="fa-solid fa-location-dot me-1"></i><span className=''>Vadakara</span>
+         <i className="fa-solid fa-location-dot me-1"></i><span className=''>{bikes.splace}</span>
          </div>
          <p className='text-center mt-4'>Contact Seller</p>
          <div className='d-flex justify-content-evenly text-center mt-2 mb-3'>
-        <a href='https://wa.me/919946241459' target='_blank' className='btn btn-outline-success' >
+        <a href={`https://wa.me/91${bikes.smobile}`} target='_blank' className='btn btn-outline-success' >
         <i class="fa-brands fa-whatsapp fa-xl"></i>
         </a>
-       <a href='tel:+919946241459' target='_blank' className='btn btn-outline-primary'>
+       <a href={`tel:+91${bikes.smobile}`} target='_blank' className='btn btn-outline-primary'>
        <i class="fa-solid fa-phone fa-xl"></i>
         </a>        </div>
         </div>
