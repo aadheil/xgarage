@@ -40,17 +40,23 @@ function Auth({register}) {
   const handleLogin=async(e)=>{
     e.preventDefault()
     var user={email:userData.email,password:userData.password}
-   const res = await loginAPI(user)
-    if(res.status===200){
-      navigate('/home')
-      console.log(res.data);
-      sessionStorage.setItem("email",res.data.email)
-      sessionStorage.setItem("userId",res.data._id)
+    if(user.email=="admin@gmail.com"&&user.password=="admin"){
+      navigate('/admindashboard')
     }
     else{
-      alert(res.response.data)
-
+      const res = await loginAPI(user)
+      if(res.status===200){
+        navigate('/home')
+        console.log(res.data);
+        sessionStorage.setItem("email",res.data.email)
+        sessionStorage.setItem("userId",res.data._id)
+      }
+      else{
+        alert(res.response.data)
+  
+      }
     }
+  
 
   }
   return (

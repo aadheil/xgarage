@@ -18,3 +18,21 @@ export const loginAPI = async(user)=>{
 export const getbikeAPI = async()=>{
    return await commonAPI("GET",`${BASEURL}/allbikes`,"","")
 }
+
+export const getusers = async()=>{
+   return await commonAPI("GET",`${BASEURL}/allusers`,"","")
+}
+
+
+
+export const deleteuser=async(userid)=>{
+   return await commonAPI("DELETE",`${BASEURL}/deleteuser`,{userid},"")
+}
+
+export const getbikesforadmin = async()=>{
+   return await commonAPI("GET",`${BASEURL}/admin/getbikes`,"","")
+}
+
+export const deletebike=async(bikeid)=>{
+   return await commonAPI("DELETE",`${BASEURL}/deletebike`,{bikeid},"")
+}

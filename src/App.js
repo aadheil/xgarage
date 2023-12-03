@@ -7,6 +7,9 @@ import Footer from './Components/Footer'
 import Landing from './Pages/Landing'
 import Addbike from './Components/Addbike'
 import Xclan from './Components/Xclan'
+import Users from './AdminTools/Usersall'
+import Managebikes from './AdminTools/Managebikes'
+
 
 function App() {
   return (
@@ -19,6 +22,10 @@ function App() {
       <Route path='/admindashboard' element={<AdminDashboard/>}/>
       <Route path='/sellyourbike' element={<Addbike/>}/>
       <Route path='/xclan' element={<Xclan/>}/>
+      <Route path='/viewusers' element={<Users/>}/>
+      <Route path='/managebikes' element={<Managebikes/>}/>
+
+
 
       {/* <Route path='/projects' element={<Projects/>}/> */}
       
