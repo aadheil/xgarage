@@ -10,15 +10,13 @@ import { getbikeAPI } from '../services/allApi'
 
 function Home() {
     const[bik,setbik]=useState([])
+    
     const getallbikesdetails = async()=>{
       const result=await getbikeAPI()
       if(result.status===200){
         setbik(result.data)
       }
-      // else{
-      //   alert(result.response.data)
-      // }
-
+     
     }
     useEffect(()=>{
     getallbikesdetails()
@@ -33,12 +31,15 @@ function Home() {
         <Carousal/>
         <Link to={'/xclan'} className='text-center' style={{textDecoration:'none'}}>View Gallery</Link>
         <h1  className='text-center text-light fw-bolder mt-5'>Our Latest Collections</h1>
-
+        {bik.length<1&&
+          <div className=''> <h1  className='text-center text-light fw-bolder mt-5'>LOADING....</h1></div>}
+       
           {bik.map((item)=>(
               <Col lg={4} xl={3} md={6} sm={12}>
               <Bikes bikes={item}/>
           </Col>
           ))}
+        
         </Row>
       </div>
 
