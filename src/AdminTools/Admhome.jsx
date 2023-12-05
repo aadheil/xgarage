@@ -38,7 +38,9 @@ var s=75
       settotalusersag(totalusersag+1)
     }
   };
+ if(totalusers){
   setTimeout(myFunction, i );
+ }
 
 
 
@@ -50,7 +52,9 @@ var s=75
         settotalbikesag(totalbikesag+1)
       }
     };
+     if(totalbikes){
       setTimeout(myFunctionforbike, i );
+     }
 
       const myFunctionforbikesold = () => {
         if(totalbikessold==45){
@@ -81,12 +85,17 @@ var s=75
         <Col className='d-flex mt-5  ' style={{width:'450px',height:'90px'}} xl={6} lg={6} sm={12} md={6}>
         <div className=' rounded-start' style={{width:'20px',height:'90px',backgroundColor:'#00848c'}}></div>
         <div className='bg-danger rounded-end justify-content-center align-items-center d-flex' style={{width:'430px',height:'90px'}}>
-           <h3 className='text-light fw-bolder' style={{}}>Acitve Users : {totalusersag}</h3></div>
+          {totalusers? <h3 className='text-light fw-bolder' style={{}}>Acitve Users : {totalusersag}</h3>:
+          <h3 className='text-light fw-bolder' style={{}}>Loading....</h3>
+          }</div>
         </Col>
         <Col className='d-flex  mt-5 ' style={{width:'450px',height:'90px'}} xl={6} lg={6} sm={12} md={6}>
         <div className=' rounded-start' style={{width:'20px',height:'90px',backgroundColor:'#00848c'}}></div>
         <div className='bg-danger rounded-end justify-content-center align-items-center d-flex' style={{width:'430px',height:'90px'}}>
-           <h3 className='text-light fw-bolder'>Total Bike Stocks : {totalbikesag}</h3>
+           {totalbikes?<h3 className='text-light fw-bolder'>Total Bike Stocks : {totalbikesag}</h3>
+                :     <h3 className='text-light fw-bolder' style={{}}>Loading....</h3>
+
+          }
         </div>
         </Col>
 
