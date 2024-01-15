@@ -36,3 +36,7 @@ export const getbikesforadmin = async()=>{
 export const deletebike=async(bikeid)=>{
    return await commonAPI("DELETE",`${BASEURL}/deletebike`,{bikeid},"")
 }
+
+export const edituser = async(userid,reqBody)=>{
+   return await commonAPI("PUT",`${BASEURL}/edituser${userid}`,reqBody,"")
+}

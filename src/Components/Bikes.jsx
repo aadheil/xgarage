@@ -44,10 +44,6 @@ function Bikes({bikes}) {
         
         <Card.Body>
           <Card.Title>{bikes.model}</Card.Title>
-          {/* <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text> */}
         </Card.Body>
         <div className='d-flex flex-column'>
          <div className='d-flex justify-content-evenly text-center'>

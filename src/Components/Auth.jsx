@@ -6,26 +6,28 @@ import './auth.css'
 function Auth({register}) {
   const registerForm = register ? true:false
   const [userData,setUserData]=useState({
-    username:"",mobile:"",email:"",password:""
+    username:"",mobile:"",email:"",password:"",access:""
   })
   // console.log(userData);
   const navigate=useNavigate()
 
   const handleRegister = async(e)=>{
+    userData.access="pending"
     e.preventDefault()
-    const{username,mobile,email,password}=userData
-    if(!username || !mobile || !email || !password){
+    const{username,mobile,email,password,access}=userData
+    if(!username || !mobile || !email || !password || !access){
         alert("Please fill the form completely")
     }
    
     else{
       // api call
+      
       const res = await registerAPI(userData)
       if(res.status===200){
         alert(`User ${res.data.username} has successfully registered`)
         // reset state
         setUserData({
-          username:"",mobile:"",email:"",password:""
+          username:"",mobile:"",email:"",password:"",access:""
         })
         navigate('/login')
       }

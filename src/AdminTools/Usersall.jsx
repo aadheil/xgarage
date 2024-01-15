@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import Navbarfroadmin from './Navbarfroadmin'
-import { deleteuser, getusers } from '../services/allApi'
+import { deleteuser, edituser, getusers } from '../services/allApi'
 
 function Usersall() {
   const[allusers,setallusers]=useState([])
   const [delresponse,setdelresponse]=useState(1)
+  // const [userData,setUserData]=useState({
+  //   username:"",mobile:"",email:"",password:"",access:""
+  // })
   const getusersdetails = async()=>{
      const result = await getusers()
     //  console.log(result.data);
@@ -27,6 +30,18 @@ function Usersall() {
     
   }
 
+  const handleapprove=async(e)=>{
+    // console.log(e.access);
+    // console.log(e);
+    var userData=({
+      username:e.username,mobile:e.mobile,email:e.email,password:e.password,access:"approved"
+    })
+    const id=e._id
+    if(userData.username&&userData.mobile&&userData.email&&userData.password){
+    const res = await edituser(id,userData)}
+    // console.log(userData);
+  }
+
   useEffect(()=>{
     getusersdetails()
   },[delresponse])
@@ -40,6 +55,7 @@ function Usersall() {
           <th>Name</th>
           <th>Mobile</th>
           <th>Email</th>
+          <th>Access</th>
           <th>Action</th>
         </tr>
       </thead>
@@ -50,7 +66,11 @@ function Usersall() {
          <td>{users.username}</td>
          <td>{users.mobile}</td>
          <td>{users.email}</td>
-         <td><button className='btn btn-outline-dark' onClick={e=>handledeleteuser(users)}>Block User</button></td>
+         <td>{users.access}</td>
+         <td className='d-flex justify-content-center'>
+          {users.access=="pending"&&<button className='btn btn-outline-success' onClick={e=>handleapprove(users)}>Approve</button>}
+         <button className='btn btn-outline-danger ms-2' onClick={e=>handledeleteuser(users)}>Block User</button>
+         </td>
        </tr>
         )): <h3 className='text-danger text-center'>No Users</h3>
        }
